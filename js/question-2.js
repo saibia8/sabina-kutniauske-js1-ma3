@@ -10,10 +10,10 @@ async function getGames() {
     try {
         const response = await fetch(url);
 
-        const results = await response.json();
+        const apiData = await response.json();
     
-        const games = results.results;
-    
+        const games = apiData.results;
+        
         resultsContainer.innerHTML = "";
     
         for (let i = 0; i < games.length; i++) {
